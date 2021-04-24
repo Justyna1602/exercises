@@ -1,0 +1,3 @@
+# Projekt z zadaniami.
+
+-------
