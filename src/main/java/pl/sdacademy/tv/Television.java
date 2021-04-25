@@ -43,13 +43,17 @@ public class Television {
     }
 
     //T.4 Do klasy dodaj metody włączajacą oraz wyłączającą telewizor (turnOn i turnOff)
-    public boolean turnOnAndOff() {
-        if (on) {
-            return on = false;
-        } else {
-            return on = true;
-        }
-
+    public void turnOn() {
+        on = true;
     }
+
+    public void turnOff() {
+        on = false;
+    }
+    //T.5 Dodaj do klasy metody pogłaśniające oraz sciszające telewizor. Głośność może znajdować się w przedziale 0-10
+    // (dalsze sciszanie/pogłaśnianie nie będzie niczym skutkowało).
+    // Głośność można zmienić jedynie, gdy telewizor jest włączony. (volumeUp i volumeDown)
+
+
 
 }
