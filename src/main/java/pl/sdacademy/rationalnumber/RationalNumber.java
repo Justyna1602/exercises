@@ -30,6 +30,10 @@ public class RationalNumber {
         return new RationalNumber(this.numerator * number.numerator, this.denominator * number.denominator);
 
     }
+//    Napisz metodę divide, która zadziała analogicznie do metody multiply.
+    public RationalNumber divide(RationalNumber number2) {
+        return new RationalNumber(this.numerator * number2.numerator, this.denominator * number2.denominator);
+    }
 
 
 
