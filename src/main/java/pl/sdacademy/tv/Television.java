@@ -53,6 +53,16 @@ public class Television {
     //T.5 Dodaj do klasy metody pogłaśniające oraz sciszające telewizor. Głośność może znajdować się w przedziale 0-10
     // (dalsze sciszanie/pogłaśnianie nie będzie niczym skutkowało).
     // Głośność można zmienić jedynie, gdy telewizor jest włączony. (volumeUp i volumeDown)
+    public void volumeUp(){
+        if (on && volume < 10){
+            volume++;
+        }
+    }
+    public void volumeDown(){
+        if (on && volume > 0){
+            volume--;
+        }
+    }
 
 
 

@@ -13,6 +13,11 @@ public class Main {
         System.out.println("zadanie 3 wyłączenie: ");
         tv1.turnOff();
         System.out.println(tv1);
+        tv2.volumeUp();
+        System.out.println("tv2 po podgłosnieniu: " + tv2);
+        tv2.volumeDown();
+        System.out.println("tv2 po sciszeniu: " + tv2);
+
 
     }
 }
