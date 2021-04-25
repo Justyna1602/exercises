@@ -13,5 +13,24 @@ public class RationalNumber {
         return numerator + " / " + denominator;
     }
 
+    public RationalNumber getOpposite() {
+        return  new RationalNumber(-numerator, denominator);
+    }
+//Napisz metode getInverse, która zwróci liczbę odwrotną (typu RationalNumber).
+     public RationalNumber getInverse() {
+        return new RationalNumber(denominator, numerator);
+     }
+
+     //3. Napisz metodę multiply, która przyjmie za parametr obiekt będący liczbą wymierną,
+    // a która zwróci wynik mnożenia obiektu, dla którego wywołano metodę przez parametr.
+    //Dzięki metodzie multiply możemy pomnożyć dwie liczby wymierne - pierwszą będzie ta,
+    // której metodę wywołamy, drugą będzie liczba przekazana przy użyciu parametru.
+    // Metoda zwróci iloczyn tych dwóch liczb (wynikiem będzie oczywiście również liczba wymierna)
+    public RationalNumber multiply(RationalNumber number){
+        return new RationalNumber(this.numerator * number.numerator, this.denominator * number.denominator);
+
+    }
+
+
 
 }

@@ -12,18 +12,22 @@ public class Drink {
     }
 
     public String toString() {
+
         return "Napój " + name + ", objętość " + volume + ", czy gazowany: " + fizzy;
     }
 
     public String getName() {
+
         return name;
     }
 
     public int getVolume() {
+
         return volume;
     }
 
     public boolean isFizzy() {
+
         return fizzy;
     }
 
