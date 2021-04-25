@@ -7,23 +7,26 @@ public class Television {
     //- aktualny program
     //- czy włączony
     private int volume;
-    private int numberOfPrograms;
-    private int currentProgram;
-    private boolean turnOn;
+    private final int channelCount;
+    private int currentChannel;
+    private boolean on;
     //T.2 W klasie mamy konstruktor ustalający wartości wszystkich pól zgodnie z wartościami parametrów.
-    //W klasie mamy r również konstruktor ustalający jedynie wartość liczby programów zgodnie z wartością parametru -
-    // w takim wypadku tworzony telewizor będzie wyłączony, aktualny program ma wartość 1, a głośność 0.
+    //W klasie mamy również konstruktor ustalający jedynie wartość liczby programów zgodnie z wartością parametru
+    // - w takim wypadku tworzony telewizor będzie wyłączony, aktualny program ma wartość 1, a głośność 0.
 
 
-    public Television(int volume, int numberOfPrograms, int currentProgram, boolean turnOn) {
+    public Television(int volume, int channelCount, int currentChannel, boolean turnOn) {
         this.volume = volume;
-        this.numberOfPrograms = numberOfPrograms;
-        this.currentProgram = currentProgram;
-        this.turnOn = turnOn;
+        this.channelCount = channelCount;
+        this.currentChannel = currentChannel;
+        this.on = turnOn;
     }
 
-    public Television(int numberOfPrograms) {
-        this.numberOfPrograms = numberOfPrograms;
+    public Television(int channelCount) {
+        this.channelCount = channelCount;
+        on = false;
+        currentChannel = 1;
+        volume = 0;
     }
 
     //T.3 Mamy również metodę o sygnaturze public String toString,
@@ -32,10 +35,21 @@ public class Television {
     // opis ma wyglądać podobnie do:
     //"Włączony telewizor. Aktualny program X (z Y dostępnych). Ustawiona głośność to Z."
     public String toString() {
-        if (turnOn) {
-            return "Włączony televizor. Aktualny Program " + currentProgram + " , z " + numberOfPrograms + " dostępnych. Ustawiona głośność to : " + volume;
+        if (on) {
+            return "Włączony televizor. Aktualny Program to: " + currentChannel + " , z " + channelCount + " dostępnych. Ustawiona głośność to : " + volume;
         } else {
             return "Wyłączony telewizor";
         }
     }
+
+    //T.4 Do klasy dodaj metody włączajacą oraz wyłączającą telewizor (turnOn i turnOff)
+    public boolean turnOnAndOff() {
+        if (on) {
+            return on = false;
+        } else {
+            return on = true;
+        }
+
+    }
+
 }
