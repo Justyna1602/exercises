@@ -39,12 +39,24 @@ public class Drink {
 //        } else {
 //            this.volume -= volume;
 //        }
-        this.volume = volume > this.volume ? 0 : this.volume - volume; // do slwka this uzywamy zeby sie do pola odwolac jesli argument mialby inna nazwe nie musimy tego pisac!!!!!
+//        this.volume = volume > this.volume ? 0 : this.volume - volume; // do slwka this uzywamy zeby sie do pola odwolac jesli argument mialby inna nazwe nie musimy tego pisac!!!!!
 
 
         //N.4 Przy piciu napoju w konsoli zostaje wypisane "gul" dla każdego upitego 100 ml.
         // Jeśli następuje chęć wypicia większej ilości niż tak,
         // która w napoju jest dostępna, dodatkowo wypisane jest w konsoli "wyzerowano!".
+
+        if (volume > this.volume) {
+            volume = this.volume;
+        }
+        this.volume -= volume;
+        while (volume > 100){ // dopoki moge wypic 100 ml
+            System.out.println("gul");
+            volume -= 100;
+        }
+        if (this.volume == 0) {
+            System.out.println("wyzerowano!");
+        }
 
     }
 
